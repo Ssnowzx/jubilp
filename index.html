@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jubi Pereira - Tattoo Artist</title>
+<link rel="stylesheet" href="css/styles.css" />
+<style>
+/* Importa a fonte New Rocker */
+@import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
+
+/* Body with black background and light-colored text */
+body {
+  background-color: black;
+  color: #DCDCDC;
+  font-family: "New Rocker", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Grid styles for header, image, and text */
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "header"
+    "image"
+    "text";
+  max-width: 960px;
+  margin: auto;
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "header image"
+      "text image";
+  }
+}
+
+/* Make all images with border-radius of 0.8rem */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+}
+
+/* Specific styles for the 'jubi.jpeg' to grayscale */
+.image img {
+  filter: grayscale(100%);
+}
+
+/* Margin for spacing between image and text */
+.image {
+  margin-bottom: 4rem;
+}
+
+/* Center align "Jubi’s Work" */
+h2 {
+  text-align: center;
+}
+
+/* Animation for fade-in and slide-up */
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Style for the button, also applying center alignment for footer */
+.btn-metallic {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  color: black;
+  background-color: #DCDCDC;
+  border-radius: 0.375rem;
+  font-size: 1.125rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  text-align: center;
+}
+.btn-metallic:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Align center for the booking button in the footer */
+.footer-btn {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Align left for the address and studio hours text */
+.footer-details {
+  text-align: left;
+}
+
+/* Responsive grid for image gallery */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.footer {
+  max-width: 960px;
+  margin: auto;
+  padding: 1rem;
+}
+</style>
+</head>
+<body>
+<!-- Conteúdo Principal (Cabeçalho, Imagem, Texto) -->
+<div class="grid-container max-w-5xl mx-auto p-2 animate">
+  <!-- Cabeçalho -->
+  <div class="header p-2" style="grid-area: header;">
+    <h1 class="text-4xl uppercase tracking-wide">Jubi Pereira</h1>
+    <p class="mt-6 text-xl">Realism Artist</p>
+    <br /><br />
+    <a href="https://wa.me/5593412285702" target="_blank" class="btn-metallic">
+      BOOK JUBI
+    </a>
+  </div>
+
+  <!-- Imagem Principal -->
+  <div class="image px-1 lg:px-2 animate" style="grid-area: image;">
+    <img src="images/jubi.jpeg" alt="Jubi Pereira" class="w-full h-auto rounded-[0.8rem] grayscale" style="object-fit: contain;" />
+  </div>
+  
+  <!-- Texto Principal -->
+  <div class="text p-2 text-xl text-center lg:text-left mt-8 lg:mt-0 animate" style="grid-area: text;">
+    Jubi Pereira, a Brazilian tattoo artist specializing in realism, currently working in Fuerteventura, Spain. My passion is to create portraits and scenes that capture the essence and emotions of people, transforming their stories into timeless works of art. Each tattoo is a special connection that I am honored to share with my clients.
+  </div>
+</div>
+
+<!-- Espaço de 4 linhas entre texto e "Jubi's Work" -->
+<br /><br /><br /><br class="animate">
+
+<!-- Título "Jubi’s Work" -->
+<h2 class="text-4xl text-center animate">Jubi’s Work</h2>
+
+<!-- Galeria de Imagens (1 coluna em mobile; 2 colunas na versão web) -->
+<div class="max-w-5xl mx-auto p-2 grid grid-cols-1 lg:grid-cols-2 gap-4 animate">
+  <img src="images/aa.jpeg" alt="Imagem 1" class="w-full h-auto object-contain" />
+  <img src="images/a.jpeg" alt="Imagem 2" class="w-full h-auto object-contain" />
+  <img src="images/d.jpeg" alt="Imagem 3" class="w-full h-auto object-contain" />
+  <img src="images/f.jpeg" alt="Imagem 4" class="w-full h-auto object-contain" />
+  <img src="images/ff.jpeg" alt="Imagem 5" class="w-full h-auto object-contain" />
+  <img src="images/sa.jpeg" alt="Imagem 6" class="w-full h-auto object-contain" />
+  <img src="images/ss.jpeg" alt="Imagem 7" class="w-full h-auto object-contain" />
+</div>
+
+<!-- Espaço de 4 linhas entre última imagem e rodapé -->
+<br /><br /><br /><br class="animate">
+
+<!-- Segundo Botão "BOOK JUBI" -->
+<div class="footer-btn animate">
+  <a href="https://wa.me/5593412285702" target="_blank" class="btn-metallic">
+    BOOK JUBI
+  </a>
+</div>
+
+<!-- Rodapé / Bloco de Informações com bordas -->
+<div class="footer max-w-5xl mx-auto p-2 text-xl animate">
+  <div class="border border-[#DCDCDC] p-4 footer-details">
+    <p><strong>Address:</strong></p>
+    <p>Calle nuestra señora del Carmen 33</p>
+    <p>local 6y7, Corralejo</p>
+    <br />
+    <p><strong>Studio Hours:</strong></p>
+    <p>Daily 7/7 10:00 22:00</p>
+    <br />
+    <div class="flex flex-col lg:flex-row gap-4">
+      <div class="flex items-center">
+        <a href="https://www.instagram.com/jubipereira/" target="_blank" aria-label="Instagram Jubi">
+          <svg xmlns="http://www.w3.org/2000/svg" style="width:0.8em; height:0.8em; margin-right: 0.5em;" fill="#DCDCDC" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.92 4.92 0 011.675 1.093 4.92 4.92 0 011.093 1.675c.163.46.349 1.26.403 2.43.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.902 4.902 0 01-1.093 1.675 4.902 4.902 0 01-1.675 1.093c-.46.163-1.26.349-2.43.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.902 4.902 0 01-1.675-1.093 4.902 4.902 0 01-1.093-1.675c-.163-.46-.349-1.26-.403-2.43C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43A4.902 4.902 0 013.73 3.062a4.902 4.902 0 011.675-1.093c.46-.163 1.26-.349 2.43-.403C8.416.013 8.796 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm4.406-10.845a1 1 0 11-2 0 1 1 0 012 0z"/>
+          </svg>
+        </a>
+        <span class="ml-2">Jubi</span>
+      </div>
+      <div class="flex items-center">
+        <a href="https://www.instagram.com/gorillatattoofv/" target="_blank" aria-label="Instagram Gorilla">
+          <svg xmlns="http://www.w3.org/2000/svg" style="width:0.8em; height:0.8em; margin-right: 0.5em;" fill="#DCDCDC" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.92 4.92 0 011.675 1.093 4.92 4.92 0 011.093 1.675c.163.46.349 1.26.403 2.43.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.902 4.902 0 01-1.093 1.675 4.902 4.902 0 01-1.675 1.093c-.46.163-1.26.349-2.43.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.902 4.902 0 01-1.675-1.093 4.902 4.902 0 01-1.093-1.675c-.163-.46-.349-1.26-.403-2.43C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43A4.902 4.902 0 013.73 3.062a4.902 4.902 0 011.675-1.093c.46-.163 1.26-.349 2.43-.403C8.416.013 8.796 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm4.406-10.845a1 1 0 11-2 0 1 1 0 012 0z"/>
+          </svg>
+        </a>
+        <span class="ml-2">Gorilla Tattoo</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script de Animação com IntersectionObserver -->
+<script>
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('animate-active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.animate').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
+
